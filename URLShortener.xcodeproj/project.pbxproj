@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF493CA025E67AA4007745FD /* URLShortenerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493C9F25E67AA4007745FD /* URLShortenerApp.swift */; };
+		AF493CA225E67AA4007745FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CA125E67AA4007745FD /* ContentView.swift */; };
+		AF493CA425E67AA4007745FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF493CA325E67AA4007745FD /* Assets.xcassets */; };
+		AF493CA725E67AA4007745FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF493CA625E67AA4007745FD /* Preview Assets.xcassets */; };
+		AF493CB225E67AA5007745FD /* URLShortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CB125E67AA5007745FD /* URLShortenerTests.swift */; };
+		AF493CBD25E67AA5007745FD /* URLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CBC25E67AA5007745FD /* URLShortenerUITests.swift */; };
+		AF493CCE25E68A03007745FD /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CCD25E68A03007745FD /* NetworkClient.swift */; };
+		AF493CD325E68A65007745FD /* URLPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CD225E68A65007745FD /* URLPresenter.swift */; };
+		AF493CDB25E68B0B007745FD /* URLDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CDA25E68B0B007745FD /* URLDataManager.swift */; };
+		AF493CE325E68CA4007745FD /* ShortURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CE225E68CA4007745FD /* ShortURL.swift */; };
+		AF493CEB25E68F7B007745FD /* ShortenedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CEA25E68F7B007745FD /* ShortenedURL.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF493CAE25E67AA5007745FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF493C9425E67AA4007745FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF493C9B25E67AA4007745FD;
+			remoteInfo = NuChallenge;
+		};
+		AF493CB925E67AA5007745FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF493C9425E67AA4007745FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF493C9B25E67AA4007745FD;
+			remoteInfo = NuChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF493C9C25E67AA4007745FD /* URLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF493C9F25E67AA4007745FD /* URLShortenerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerApp.swift; sourceTree = "<group>"; };
+		AF493CA125E67AA4007745FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF493CA325E67AA4007745FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF493CA625E67AA4007745FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF493CA825E67AA4007745FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF493CAD25E67AA5007745FD /* URLShortenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLShortenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF493CB125E67AA5007745FD /* URLShortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerTests.swift; sourceTree = "<group>"; };
+		AF493CB325E67AA5007745FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF493CB825E67AA5007745FD /* URLShortenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLShortenerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF493CBC25E67AA5007745FD /* URLShortenerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerUITests.swift; sourceTree = "<group>"; };
+		AF493CBE25E67AA5007745FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF493CCD25E68A03007745FD /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		AF493CD225E68A65007745FD /* URLPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPresenter.swift; sourceTree = "<group>"; };
+		AF493CDA25E68B0B007745FD /* URLDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataManager.swift; sourceTree = "<group>"; };
+		AF493CE225E68CA4007745FD /* ShortURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortURL.swift; sourceTree = "<group>"; };
+		AF493CEA25E68F7B007745FD /* ShortenedURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenedURL.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF493C9925E67AA4007745FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CAA25E67AA5007745FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CB525E67AA5007745FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF493C9325E67AA4007745FD = {
+			isa = PBXGroup;
+			children = (
+				AF493C9E25E67AA4007745FD /* URLShortener */,
+				AF493CB025E67AA5007745FD /* URLShortenerTests */,
+				AF493CBB25E67AA5007745FD /* URLShortenerUITests */,
+				AF493C9D25E67AA4007745FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF493C9D25E67AA4007745FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF493C9C25E67AA4007745FD /* URLShortener.app */,
+				AF493CAD25E67AA5007745FD /* URLShortenerTests.xctest */,
+				AF493CB825E67AA5007745FD /* URLShortenerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF493C9E25E67AA4007745FD /* URLShortener */ = {
+			isa = PBXGroup;
+			children = (
+				AF493C9F25E67AA4007745FD /* URLShortenerApp.swift */,
+				AF493CA125E67AA4007745FD /* ContentView.swift */,
+				AF493CCD25E68A03007745FD /* NetworkClient.swift */,
+				AF493CD225E68A65007745FD /* URLPresenter.swift */,
+				AF493CDA25E68B0B007745FD /* URLDataManager.swift */,
+				AF493CE225E68CA4007745FD /* ShortURL.swift */,
+				AF493CA325E67AA4007745FD /* Assets.xcassets */,
+				AF493CA825E67AA4007745FD /* Info.plist */,
+				AF493CA525E67AA4007745FD /* Preview Content */,
+				AF493CEA25E68F7B007745FD /* ShortenedURL.swift */,
+			);
+			path = URLShortener;
+			sourceTree = "<group>";
+		};
+		AF493CA525E67AA4007745FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF493CA625E67AA4007745FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF493CB025E67AA5007745FD /* URLShortenerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF493CB125E67AA5007745FD /* URLShortenerTests.swift */,
+				AF493CB325E67AA5007745FD /* Info.plist */,
+			);
+			path = URLShortenerTests;
+			sourceTree = "<group>";
+		};
+		AF493CBB25E67AA5007745FD /* URLShortenerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF493CBC25E67AA5007745FD /* URLShortenerUITests.swift */,
+				AF493CBE25E67AA5007745FD /* Info.plist */,
+			);
+			path = URLShortenerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF493C9B25E67AA4007745FD /* URLShortener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF493CC125E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortener" */;
+			buildPhases = (
+				AF493C9825E67AA4007745FD /* Sources */,
+				AF493C9925E67AA4007745FD /* Frameworks */,
+				AF493C9A25E67AA4007745FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URLShortener;
+			productName = NuChallenge;
+			productReference = AF493C9C25E67AA4007745FD /* URLShortener.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF493CAC25E67AA5007745FD /* URLShortenerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF493CC425E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortenerTests" */;
+			buildPhases = (
+				AF493CA925E67AA5007745FD /* Sources */,
+				AF493CAA25E67AA5007745FD /* Frameworks */,
+				AF493CAB25E67AA5007745FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF493CAF25E67AA5007745FD /* PBXTargetDependency */,
+			);
+			name = URLShortenerTests;
+			productName = NuChallengeTests;
+			productReference = AF493CAD25E67AA5007745FD /* URLShortenerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF493CB725E67AA5007745FD /* URLShortenerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF493CC725E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortenerUITests" */;
+			buildPhases = (
+				AF493CB425E67AA5007745FD /* Sources */,
+				AF493CB525E67AA5007745FD /* Frameworks */,
+				AF493CB625E67AA5007745FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF493CBA25E67AA5007745FD /* PBXTargetDependency */,
+			);
+			name = URLShortenerUITests;
+			productName = NuChallengeUITests;
+			productReference = AF493CB825E67AA5007745FD /* URLShortenerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF493C9425E67AA4007745FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AF493C9B25E67AA4007745FD = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					AF493CAC25E67AA5007745FD = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AF493C9B25E67AA4007745FD;
+					};
+					AF493CB725E67AA5007745FD = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AF493C9B25E67AA4007745FD;
+					};
+				};
+			};
+			buildConfigurationList = AF493C9725E67AA4007745FD /* Build configuration list for PBXProject "URLShortener" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF493C9325E67AA4007745FD;
+			productRefGroup = AF493C9D25E67AA4007745FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF493C9B25E67AA4007745FD /* URLShortener */,
+				AF493CAC25E67AA5007745FD /* URLShortenerTests */,
+				AF493CB725E67AA5007745FD /* URLShortenerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF493C9A25E67AA4007745FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF493CA725E67AA4007745FD /* Preview Assets.xcassets in Resources */,
+				AF493CA425E67AA4007745FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CAB25E67AA5007745FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CB625E67AA5007745FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF493C9825E67AA4007745FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF493CD325E68A65007745FD /* URLPresenter.swift in Sources */,
+				AF493CA225E67AA4007745FD /* ContentView.swift in Sources */,
+				AF493CA025E67AA4007745FD /* URLShortenerApp.swift in Sources */,
+				AF493CEB25E68F7B007745FD /* ShortenedURL.swift in Sources */,
+				AF493CCE25E68A03007745FD /* NetworkClient.swift in Sources */,
+				AF493CE325E68CA4007745FD /* ShortURL.swift in Sources */,
+				AF493CDB25E68B0B007745FD /* URLDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CA925E67AA5007745FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF493CB225E67AA5007745FD /* URLShortenerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF493CB425E67AA5007745FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF493CBD25E67AA5007745FD /* URLShortenerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF493CAF25E67AA5007745FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF493C9B25E67AA4007745FD /* URLShortener */;
+			targetProxy = AF493CAE25E67AA5007745FD /* PBXContainerItemProxy */;
+		};
+		AF493CBA25E67AA5007745FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF493C9B25E67AA4007745FD /* URLShortener */;
+			targetProxy = AF493CB925E67AA5007745FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF493CBF25E67AA5007745FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF493CC025E67AA5007745FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF493CC225E67AA5007745FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"URLShortener/Preview Content\"";
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = URLShortener/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF493CC325E67AA5007745FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"URLShortener/Preview Content\"";
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = URLShortener/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF493CC525E67AA5007745FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				INFOPLIST_FILE = URLShortenerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URLShortener.app/URLShortener";
+			};
+			name = Debug;
+		};
+		AF493CC625E67AA5007745FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				INFOPLIST_FILE = URLShortenerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortenerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URLShortener.app/URLShortener";
+			};
+			name = Release;
+		};
+		AF493CC825E67AA5007745FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				INFOPLIST_FILE = URLShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "URLShortener\nURLShortener.xcodeproj\nURLShortenerTests\nURLShortenerUITests";
+			};
+			name = Debug;
+		};
+		AF493CC925E67AA5007745FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBGDXL9LHD;
+				INFOPLIST_FILE = URLShortenerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diegodossantos.URLShortenerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "URLShortener\nURLShortener.xcodeproj\nURLShortenerTests\nURLShortenerUITests";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF493C9725E67AA4007745FD /* Build configuration list for PBXProject "URLShortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF493CBF25E67AA5007745FD /* Debug */,
+				AF493CC025E67AA5007745FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF493CC125E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF493CC225E67AA5007745FD /* Debug */,
+				AF493CC325E67AA5007745FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF493CC425E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortenerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF493CC525E67AA5007745FD /* Debug */,
+				AF493CC625E67AA5007745FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF493CC725E67AA5007745FD /* Build configuration list for PBXNativeTarget "URLShortenerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF493CC825E67AA5007745FD /* Debug */,
+				AF493CC925E67AA5007745FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF493C9425E67AA4007745FD /* Project object */;
+}
