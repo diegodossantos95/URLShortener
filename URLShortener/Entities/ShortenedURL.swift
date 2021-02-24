@@ -8,5 +8,10 @@
 import Foundation
 
 class ShortenedURL: Codable {
+    
+    init(alias: String) {
+        self.alias = alias
+    }
+    
     var alias: String
 }
