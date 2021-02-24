@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let presenter = URLPresenter()
+    let presenter = URLPresenter(dataManager: URLDataManager(networkClient: NetworkClient()))
     @State var url = ""
     @State var urlList = [ShortenedURL]()
     

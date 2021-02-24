@@ -14,7 +14,14 @@ enum HTTPRequestError: Error {
     case Unknown(String)
 }
 
-class NetworkClient {
+protocol NetworkClientProtocol {
+    func getHTTP<T : Decodable>(at url: String, withCompletion completion: @escaping (T?, HTTPRequestError?) -> Void)
+    func getHTTP(at url: String, withCompletion completion: @escaping (Data?, HTTPRequestError?) -> Void)
+    func postHTTP<T : Encodable>(at url: String, withEncodableObj encodableObj: T, withCompletion completion: @escaping (Data?, HTTPRequestError?) -> Void)
+    func postHTTP<T : Encodable, Y: Decodable>(at url: String, withEncodableObj encodableObj: T, withDecodableObj decodableObj: Y.Type, withCompletion completion: @escaping (Y?, HTTPRequestError?) -> Void)
+}
+
+class NetworkClient: NetworkClientProtocol {
     /// Performs a GET operation at the specified url and returns a JSON.
     ///
     /// - Parameters:

@@ -8,7 +8,11 @@
 import Foundation
 
 class URLPresenter {
-    let dataManager = URLDataManager(networkClient: NetworkClient())
+    let dataManager: URLDataManagerProtocol
+    
+    init(dataManager: URLDataManagerProtocol) {
+        self.dataManager = dataManager
+    }
     
     func save(url: ShortURL, completion: @escaping (ShortenedURL?, HTTPRequestError?) -> Void) {
         dataManager.post(url: url, completion: completion)

@@ -7,9 +7,20 @@
 
 import Foundation
 
-struct URLDataManager {
-    let networkClient: NetworkClient
+protocol URLDataManagerProtocol {
+    var networkClient: NetworkClientProtocol { get set }
+    
+    func post(url: ShortURL, completion: @escaping (ShortenedURL?, HTTPRequestError?) -> Void)
+    func get(url: ShortenedURL, completion: @escaping (ShortURL?, HTTPRequestError?) -> Void)
+}
+
+class URLDataManager: URLDataManagerProtocol {
+    var networkClient: NetworkClientProtocol
     let baseURL = "https://url-shortener-nu.herokuapp.com/api/alias"
+    
+    init(networkClient: NetworkClientProtocol) {
+        self.networkClient = networkClient
+    }
     
     func post(url: ShortURL, completion: @escaping (ShortenedURL?, HTTPRequestError?) -> Void) {
         networkClient.postHTTP(at: baseURL, withEncodableObj: url, withDecodableObj: ShortenedURL.self, withCompletion: completion)

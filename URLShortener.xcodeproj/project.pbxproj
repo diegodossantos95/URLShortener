@@ -15,9 +15,9 @@
 		AF493CBD25E67AA5007745FD /* URLShortenerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CBC25E67AA5007745FD /* URLShortenerUITests.swift */; };
 		AF493CCE25E68A03007745FD /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CCD25E68A03007745FD /* NetworkClient.swift */; };
 		AF493CD325E68A65007745FD /* URLPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CD225E68A65007745FD /* URLPresenter.swift */; };
-		AF493CDB25E68B0B007745FD /* URLDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CDA25E68B0B007745FD /* URLDataManager.swift */; };
 		AF493CE325E68CA4007745FD /* ShortURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CE225E68CA4007745FD /* ShortURL.swift */; };
-		AF493CEB25E68F7B007745FD /* ShortenedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CEA25E68F7B007745FD /* ShortenedURL.swift */; };
+		AF493D2925E6CD25007745FD /* ShortenedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CEA25E68F7B007745FD /* ShortenedURL.swift */; };
+		AF493D3025E6CD29007745FD /* URLDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF493CDA25E68B0B007745FD /* URLDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,14 +107,13 @@
 			children = (
 				AF493C9F25E67AA4007745FD /* URLShortenerApp.swift */,
 				AF493CA125E67AA4007745FD /* ContentView.swift */,
-				AF493CCD25E68A03007745FD /* NetworkClient.swift */,
 				AF493CD225E68A65007745FD /* URLPresenter.swift */,
 				AF493CDA25E68B0B007745FD /* URLDataManager.swift */,
-				AF493CE225E68CA4007745FD /* ShortURL.swift */,
+				AF493CCD25E68A03007745FD /* NetworkClient.swift */,
+				AF493D1F25E6CB74007745FD /* Entities */,
 				AF493CA325E67AA4007745FD /* Assets.xcassets */,
 				AF493CA825E67AA4007745FD /* Info.plist */,
 				AF493CA525E67AA4007745FD /* Preview Content */,
-				AF493CEA25E68F7B007745FD /* ShortenedURL.swift */,
 			);
 			path = URLShortener;
 			sourceTree = "<group>";
@@ -143,6 +142,15 @@
 				AF493CBE25E67AA5007745FD /* Info.plist */,
 			);
 			path = URLShortenerUITests;
+			sourceTree = "<group>";
+		};
+		AF493D1F25E6CB74007745FD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AF493CEA25E68F7B007745FD /* ShortenedURL.swift */,
+				AF493CE225E68CA4007745FD /* ShortURL.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,11 +284,11 @@
 			files = (
 				AF493CD325E68A65007745FD /* URLPresenter.swift in Sources */,
 				AF493CA225E67AA4007745FD /* ContentView.swift in Sources */,
+				AF493D3025E6CD29007745FD /* URLDataManager.swift in Sources */,
 				AF493CA025E67AA4007745FD /* URLShortenerApp.swift in Sources */,
-				AF493CEB25E68F7B007745FD /* ShortenedURL.swift in Sources */,
+				AF493D2925E6CD25007745FD /* ShortenedURL.swift in Sources */,
 				AF493CCE25E68A03007745FD /* NetworkClient.swift in Sources */,
 				AF493CE325E68CA4007745FD /* ShortURL.swift in Sources */,
-				AF493CDB25E68B0B007745FD /* URLDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
